@@ -1,8 +1,8 @@
 ataset=read.csv('Data.csv')
-#missing data
+#missing data concept is used when some data's are not present in given dataset,so we replace that missing data by mean of remaining data's..below code explain this. 
 dataset$Age=ifelse(is.na(dataset$Age),ave(dataset$Age,FUN=function(x) mean(x,na.rm=TRUE)),dataset$Age)
 dataset$Salary=ifelse(is.na(dataset$Salary),ave(dataset$Salary,FUN=function(x) mean(x,na.rm=TRUE)),dataset$Salary)
-#categoriacl data
+#categoriacl data:**it is used to convert string dat to certain numerical constants and replace them with those constants.
 dataset$Country=factor(dataset$Country,levels=c('France','Spain','Germany'),labels=c(1,2,3))
 dataset$Purchased=factor(dataset$Purchased,levels=c('Yes','No'),labels=c(1,0))
 #splitting dataset
