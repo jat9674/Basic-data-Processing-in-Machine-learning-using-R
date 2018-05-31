@@ -14,6 +14,7 @@ ggplot()+
   ggtitle('PROFIT VS R.D')+
   xlab('R.D')+
   ylab('Profit')
+#see train_profit.png
 #test_set
 ggplot()+
   geom_point(aes(x=test_set$R.D.Spend,y=test_set$Profit),colour='green')+
@@ -21,6 +22,7 @@ ggplot()+
   ggtitle('PROFIT VS R.D')+
   xlab('R.D')+
   ylab('Profit')
+#see test_profit.png
  #Backward elimination method
 regressor=lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,data=dataset)
 summary(regressor)
